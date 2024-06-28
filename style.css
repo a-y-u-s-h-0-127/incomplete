@@ -1,0 +1,191 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: linear-gradient(36deg, rgb(10 10 10), rgb(83 74 74));
+    height: 100vh;
+    width: 100vw;
+}
+
+/* display styling */
+
+.display-box {
+    height: 100%;
+    width: 100%;
+}
+
+
+#display {
+    width: 98%;
+    height: 98%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    text-align: end;
+    color: white;
+    font-size: 2rem;
+    caret-color: orangered;
+}
+
+
+#display::placeholder {
+    color: white;
+    font-size: 2rem;
+}
+
+
+/* original calculator */
+
+#structure {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    height: 100%;
+}
+
+.number {
+    order: 3;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    align-items: end;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.number-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-bottom: 22px;
+}
+
+.button {
+    margin: 5px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.089);
+    color: white;
+    border: 2px solid rgba(0, 0, 0, 0.089);
+}
+
+.button:active {
+    background-color: rgba(0, 0, 0, 0.267);
+}
+
+.number :nth-child(24) {
+    background-image: linear-gradient(rgba(175, 55, 11, 0.76), orangered);
+}
+
+.number :nth-child(24):active {
+    background-image: linear-gradient(orangered, rgb(204, 67, 13));
+}
+
+/* menu styling */
+
+.menu {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 155px;
+    order: 2;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.menu-button {
+    width: 70%;
+    margin: 10px;
+    background: linear-gradient(gray, #3a02027a);
+    box-shadow: 3px 1px 10px 0px #160c0f;
+    color: rgba(230, 214, 214, 0.63);
+    border: 1px double rgba(128, 128, 128, 0.089);
+}
+
+.menu-button:active{
+    background: linear-gradient(rgba(128, 128, 128, 0.37), #3a02027a);
+    transform: scale(0.96);
+    font-size: 14.2px;
+}
+
+.menu-bar {
+    border: 1px solid white;
+    width: 20px;
+    margin: 2px;
+}
+
+.box {
+    margin: 10px;
+}
+
+.row {
+    display: inline-block;
+    color: #ffff;
+}
+
+/* history styling */
+
+.history {
+    order: 4;
+    overflow-y: auto;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#updatehistory{
+    height: 95vh;
+    overflow-y: auto;
+    color: white;
+    font-size: 1.2rem;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    margin-left: 7px;
+}
+
+i {
+    color: white;
+    position: relative;
+    top: 5px;
+}
+
+/* trigonometry function  */
+
+.trigonometryStructure{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.trigonometryButton{
+    background-color: rgba(0, 0, 0, 0.089);
+    border: 2px solid rgba(0, 0, 0, 0.089);
+    color: white;
+    font-size: 17.6px;
+    margin: 10px;
+}
+
+.trigonometryButton:active{
+    background-color: rgba(0, 0, 0, 0.267);
+}
+
+.trigonometry2ndButton{
+    background-color: rgba(0, 0, 0, 0.089);
+    border: 2px solid rgba(0, 0, 0, 0.089);
+    color: white;
+    font-size: 17.6px;
+}
+
+#secondphase{
+    border: 1px solid rgba(255, 255, 255, 0.384);
+}
